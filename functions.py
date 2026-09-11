@@ -26,4 +26,16 @@ result2 = greeting("Justin")
 print("result2: ", result2)
 
 
+print("===== Keyword & default arguments =====")
+def give_greet(name, age = 22): #default argument (age = 22)
+    print("give_greet is executed")
+    return f"Hi {name} you are {age} years old!"
+
+res = give_greet(name = "Justin", age = 28)  #keyword argument (name = "Justin", age =28)
+print("res: ", res)
+
+res = give_greet(name = "Martin")  #keyword argument
+print("res: ", res)
+
+
 
