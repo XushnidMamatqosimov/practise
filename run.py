@@ -1,18 +1,12 @@
+# Dunder __builtins__, __init__ 
 message = "Hello world"
 print(message)
+print(type(message))
 
-#  Mit Task
+''' In Python, there are builtin tools:
+ (1) Types => int float str list dict
+ (2) Function => print(), len(), input(), type() str() int()
+ (3) Constants => True False None
+'''
 
-
-def findDoublers(text):
-    for letter in text:
-        if text.count(letter) == 2:
-            return True
-    return False;
-        
-            
-    
-
-
-res = findDoublers("halol")
-print(res)
+print(dir(__builtins__))
