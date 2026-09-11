@@ -38,4 +38,13 @@ res = give_greet(name = "Martin")  #keyword argument
 print("res: ", res)
 
 
+print("===== Scopes =====")
+b = 100 # 3
+
+def calculate(a , b): #2
+    c = a * b # 1
+    print(f"c value: {c}")
+    
+    
+calculate(5,2)
 
