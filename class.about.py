@@ -41,3 +41,41 @@ print("======static State=====")
 print(Person.message)
 # static method
 Person.explain()
+
+
+print("===== Python Magic methos =====")
+#  __init__, __new__, __eq__, __str__, __call__, __getitem__, __len__
+
+
+class Car():
+    defination = "This is car class's static state"
+
+    def __new__(cls, *args):
+        print("*__new__*")
+        return super().__new__(cls)
+
+    def __init__(self, name, year):
+        print("bu __init__ dunder")
+        self.name = name
+        self.year = year
+
+    def start_engine(self):
+        print(f"{self.name} engine is activated")
+
+    def stop_engine(self):
+        print(f"{self.name} engine is stopped")
+
+    def __str__(self):
+        return f"the car name {self.name} and its year {self.year}"
+    
+    def __call__(self, *args, **kwds):
+        print("Object called as function")
+
+
+car_obj = Car("Ferrari", 2025)
+car_obj.start_engine()
+car_obj.stop_engine()
+print("------")
+carByd = Car("Byd", 2021)
+print(carByd)
+carByd()
