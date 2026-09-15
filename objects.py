@@ -28,7 +28,7 @@ try:
     print("passed here")
     a = car_dict.speed
     print(f"result: {car_dict['origin']}")
-except KeyError and AttributeError as err:
+except (KeyError, AttributeError) as err:
     print("Error occured: ", err)
 else:
     print("If try works properly we overflow except and print else together with try")
