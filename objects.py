@@ -20,4 +20,3 @@ print(type(math))
 print(math.ceil(97.7))
 print(math.ceil(98.7))
 
-
